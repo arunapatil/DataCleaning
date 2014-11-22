@@ -60,9 +60,6 @@ The dataset includes the following files:
 - 'test/Inertial Signals/' : The contents of this folder are not relevant for this project
 
 
-	
-================================================================
-
  1. Merge the training and the test sets to create one data set.
  
 ================================================================
@@ -74,8 +71,6 @@ The dataset includes the following files:
 1.5 To obtain one merged data set, rbind the trainingDataSet and testDataSet together to combine the rows.New data is is in mergedSet.
 
 
-==========================================================================================
-
  2. Extract only the measurements on the mean and standard deviation for each measurement. 
  
 ==========================================================================================
@@ -84,7 +79,6 @@ The dataset includes the following files:
 2.2 Subset mergedSet to get only the columns returned in step 2.1 along with the first and second columns which have Subject and Activity information. New data is in filteredDataSet.
 
 
-==========================================================================================
 
  3. Use descriptive activity names to name the activities in the dataset
  
@@ -95,7 +89,6 @@ The dataset includes the following files:
 3.3 Remove the activity column (which shows the activity number) from the new data frame since it has the activity name (optional step). The new data is in newDataSet
 
 
-==========================================================================================
 
  4. Appropriately label the data set w/ descriptive variable name
  
@@ -105,7 +98,6 @@ The dataset includes the following files:
 X_train and X_test was already read in using descriptive column names in step 1.1, so there's nothing additional to do here
 
 
-==========================================================================================
 
  5. from data created at step 4 create a second, independent, tidy dataset
  
@@ -115,7 +107,6 @@ X_train and X_test was already read in using descriptive column names in step 1.
 
 5.1 Use ddply to split newDataSet by ActivityName and Subject and calculate mean for each measurement using the numcolwise(mean) function. New data is in tidyDataSet
 
-=================================================================================
 
 6. write the dataset in a txt file created with write.table() using row.name=FALSE
 
